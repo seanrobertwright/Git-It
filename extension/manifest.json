@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Git It!",
   "version": "1.0.0",
-  "description": "Bookmark GitHub repositories into your private my-hits repo.",
+  "description": "Bookmark GitHub repositories into a private repo you own.",
   "permissions": ["storage"],
   "host_permissions": ["https://api.github.com/*"],
   "background": {

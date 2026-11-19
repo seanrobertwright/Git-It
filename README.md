@@ -11,7 +11,7 @@ them from the Windows tray.
 
 ## How the data is stored
 
-`hits.json` in the bookmarks repo (default name `my-hits`), newest first:
+`hits.json` in the bookmarks repo (default name `my-gits`), newest first:
 
 ```json
 {
@@ -40,8 +40,8 @@ to case, is not added twice.
    gh repo create my-gits --private
    ```
 
-   The apps default to a repo named `my-hits`, so enter `my-gits` in the
-   **Bookmarks repo** field in both settings screens below.
+   Both apps use `my-gits` unless you enter another name in the **Bookmarks repo**
+   field in their settings.
 
 2. Create a [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new):
    - Repository access: **Only select repositories** → `my-gits`
