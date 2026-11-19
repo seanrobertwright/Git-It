@@ -37,11 +37,14 @@ to case, is not added twice.
 1. Create the private bookmarks repo:
 
    ```sh
-   gh repo create my-hits --private
+   gh repo create my-gits --private
    ```
 
+   The apps default to a repo named `my-hits`, so enter `my-gits` in the
+   **Bookmarks repo** field in both settings screens below.
+
 2. Create a [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new):
-   - Repository access: **Only select repositories** → `my-hits`
+   - Repository access: **Only select repositories** → `my-gits`
    - Permissions: **Contents: Read and write**
 
    You can use one token for both apps, or give the tray app a separate read-only
