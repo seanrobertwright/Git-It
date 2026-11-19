@@ -1,0 +1,47 @@
+.git-it-button {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.git-it-button[data-state="got"] {
+  color: #1a7f37;
+  cursor: default;
+}
+
+.git-it-button[data-state="error"] {
+  color: #cf222e;
+}
+
+.git-it-button[data-state="busy"] {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.git-it-floating {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483000;
+  padding: 8px 16px;
+  border: 1px solid rgba(31, 35, 40, 0.15);
+  border-radius: 6px;
+  background: #2da44e;
+  color: #fff;
+  font: 600 14px/20px -apple-system, "Segoe UI", sans-serif;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.git-it-floating[data-state="got"] {
+  background: #fff;
+  color: #1a7f37;
+}
+
+.git-it-floating[data-state="error"] {
+  background: #fff;
+  color: #cf222e;
+}
+
+.git-it-button:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+}

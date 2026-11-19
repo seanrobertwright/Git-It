@@ -1,0 +1,15 @@
+#!/bin/sh
+# Blocks commits that contain U+FFFD, plus any extended regexes listed one per line in
+# .git/forbidden-patterns. That file is local and untracked, so personal identifiers
+# never have to appear in the repository itself.
+fffd=$(printf '\357\277\275')
+patterns_file="$(git rev-parse --git-dir)/forbidden-patterns"
+pattern="$fffd"
+if [ -f "$patterns_file" ]; then
+  extra=$(grep -v '^[[:space:]]*$' "$patterns_file" | paste -sd'|' -)
+  [ -n "$extra" ] && pattern="$pattern|$extra"
+fi
+if git diff --cached --name-only --diff-filter=ACM -z | xargs -0 -r grep -EIn "$pattern" --; then
+  echo "pre-commit: remove the lines above before committing." >&2
+  exit 1
+fi
