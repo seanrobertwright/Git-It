@@ -5,7 +5,7 @@ const API = 'https://api.github.com';
 const TIMEOUT_MS = 15_000;
 const HITS_PATH = 'hits.json';
 const MAX_ATTEMPTS = 4;
-export const DEFAULT_REPO = 'my-hits';
+export const DEFAULT_REPO = 'my-gits';
 
 export const OWNER_RE = /^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})$/;
 export const REPO_RE = /^[A-Za-z0-9._-]{1,100}$/;

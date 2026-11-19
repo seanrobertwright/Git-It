@@ -16,7 +16,7 @@ public sealed record RepoConfig(string Owner, string Repo, string Token);
 
 public static partial class Names
 {
-    public const string DefaultRepo = "my-hits";
+    public const string DefaultRepo = "my-gits";
 
     [GeneratedRegex("^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})$")]
     private static partial Regex OwnerRegex();
